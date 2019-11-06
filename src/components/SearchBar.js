@@ -11,6 +11,7 @@ const SearchBar = ({ term, onTermChange }) => {
         size={30}
       />
       <TextInput
+        autoCapitalize="none"
         style={styles.inputStyle}
         placeholder="Search"
         value={term}
