@@ -12,6 +12,7 @@ const SearchBar = ({ term, onTermChange }) => {
       />
       <TextInput
         autoCapitalize="none"
+        autoCorrect={false}
         style={styles.inputStyle}
         placeholder="Search"
         value={term}
