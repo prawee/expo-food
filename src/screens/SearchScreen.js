@@ -24,9 +24,9 @@ const SearchScreen = () => {
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>We have found {results.length} results</Text>
-      <ResultsList title="Cost Effective"/>
-      <ResultsList title="Bit Priceier" />
-      <ResultsList title="Big Spender" />
+      <ResultsList results={filterResultsByPrice('$')} title="Cost Effective"/>
+      <ResultsList results={filterResultsByPrice('$$')} title="Bit Priceier" />
+      <ResultsList results={filterResultsByPrice('$$$')} title="Big Spender" />
     </View>
   )
 }
