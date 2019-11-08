@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar'
 import useResults from '../hooks/useResults'
 import ResultsList from '../components/ResultsList'
 
-const SearchScreen = ({ navigation }) => {
+const SearchScreen = () => {
   const [term, setTerm] = useState('');
   const [searchApi, results, errorMessage] = useResults();
 
@@ -25,15 +25,12 @@ const SearchScreen = ({ navigation }) => {
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <ScrollView>
         <ResultsList 
-          navigation={navigation} 
           results={filterResultsByPrice('$')} 
           title="Cost Effective"/>
         <ResultsList 
-          navigation={navigation} 
           results={filterResultsByPrice('$$')} 
           title="Bit Priceier" />
         <ResultsList 
-          navigation={navigation} 
           results={filterResultsByPrice('$$$')} 
           title="Big Spender" />
       </ScrollView>
