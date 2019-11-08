@@ -9,6 +9,9 @@ const ResultsDetail = ({ result }) => {
         source={{ uri: result.image_url }} 
       />
       <Text style={styles.name}>{result.name}</Text>
+      <Text>
+        {result.rating} Starts, {result.review_count} Reviews
+      </Text>
     </View>
   )
 }
